@@ -71,7 +71,7 @@ function App() {
     }
     const lastChar = exp.slice(-1);
     if (!numbers.includes(lastChar)) exp = exp.slice(0, -1);
-
+    // eslint-disable-next-line no-eval
     const answer = eval(exp).toFixed(2) + "";
     setResult(answer);
   };
