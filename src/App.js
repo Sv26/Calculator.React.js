@@ -7,14 +7,16 @@ import moonIcon from "./asstes/moon.png";
 import sunIcon from "./asstes/sun (1).png";
 
 import "./App.css";
-
+// List of key codes that are used by the calculator
 const usedKeyCodes = [
   48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 96, 97, 98, 99, 100, 101, 102, 103,
   104, 105, 8, 13, 190, 187, 189, 191, 56, 111, 106, 107, 109,
 ];
+// List of numbers
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// List of operators
 const operators = ["-", "+", "*", "/"];
-
+// State variables
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(
     JSON.parse(localStorage.getItem("calculator-app-mode")) || false
@@ -25,6 +27,7 @@ function App() {
     JSON.parse(localStorage.getItem("calculator-app-history")) || []
   );
 
+  // Event handler for key presses
   const handleKeyPress = (keyCode, key) => {
     if (!keyCode) return;
     if (!usedKeyCodes.includes(keyCode)) return;
@@ -64,6 +67,7 @@ function App() {
     }
   };
 
+  // Function to calculate the result of the expression
   const calculateResult = (exp) => {
     if (!exp) {
       setResult("");
@@ -75,7 +79,13 @@ function App() {
     const answer = eval(exp).toFixed(2) + "";
     setResult(answer);
   };
+  const handleClear = () => {
+    setExression("");
+    setResult("");
+    setHistory([]);
+  };
 
+  // Save dark mode preference to local storage
   useEffect(() => {
     localStorage.setItem("calculator-app-mode", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
@@ -83,7 +93,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem("calculator-app-history", JSON.stringify(history));
   }, [history]);
-
+  // Render the calculator app
   return (
     <div
       className="app"
@@ -108,6 +118,7 @@ function App() {
 
         <Header expression={expression} result={result} history={history} />
         <KeyPad handleKeyPress={handleKeyPress} />
+        <button onClick={handleClear}>Clear</button>
       </div>
     </div>
   );

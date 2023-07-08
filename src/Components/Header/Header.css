@@ -1,33 +1,33 @@
 .header {
-  flex: 1;
-  background-color: var(--bg-color-1);
-  padding: 20px;
-  overflow-y: scroll;
+  flex: 1; /* Flex property to occupy remaining space */
+  background-color: var(--bg-color-1); /* Background color using variable 1 */
+  padding: 20px; /* Padding around the header */
+  overflow-y: scroll; /* Enable vertical scrolling if content overflows */
 }
 
 .header p {
-  font-size: 1rem;
-  line-height: 1.875rem;
-  color: var(--text-color-1);
-  display: flex;
-  justify-content: flex-end;
+  font-size: 1rem; /* Font size of the paragraph */
+  line-height: 1.875rem; /* Line height of the paragraph */
+  color: var(--text-color-1); /* Text color using variable 1 */
+  display: flex; /* Display as a flex container */
+  justify-content: flex-end; /* Align content to the flex end */
 }
 
 .header_expression {
-  overflow-x: scroll;
-  width: 100%;
-  min-height: 30px;
+  overflow-x: scroll; /* Enable horizontal scrolling if content overflows */
+  width: 100%; /* Set width to 100% */
+  min-height: 30px; /* Minimum height of the expression container */
 }
 
 .header_expression p {
-  white-space: nowrap;
-  min-width: 100%;
-  width: fit-content;
-  font-weight: bold;
+  white-space: nowrap; /* Prevent wrapping of text */
+  min-width: 100%; /* Minimum width of the expression paragraph */
+  width: fit-content; /* Set width to fit the content */
+  font-weight: bold; /* Set font weight to bold */
 }
 
 .header_result {
-  font-weight: bold;
-  font-size: 1.3rem !important;
-  min-height: 30px;
+  font-weight: bold; /* Set font weight to bold */
+  font-size: 1.3rem !important; /* Font size of the result with important rule */
+  min-height: 30px; /* Minimum height of the result container */
 }

@@ -1,43 +1,48 @@
 .keypad {
-  flex: 1.3;
-  background-color: var(--bg-color-2);
-  padding: 20px;
-  display: flex;
+  flex: 1.3; /* Flex property to occupy 1.3 units of space */
+  background-color: var(--bg-color-2); /* Background color using variable 2 */
+  padding: 20px; /* Padding around the keypad */
+  display: flex; /* Display as a flex container */
 }
 
 .keypad p {
-  line-height: 1.875rem;
-  font-size: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 200ms;
-  user-select: none;
-  cursor: pointer;
-  color: var(--text-color-2);
+  line-height: 1.875rem; /* Line height of the paragraph */
+  font-size: 1.8rem; /* Font size of the paragraph */
+  display: flex; /* Display as a flex container */
+  justify-content: center; /* Align content to the center horizontally */
+  align-items: center; /* Align content to the center vertically */
+  transition: 200ms; /* Transition duration for hover and active states */
+  user-select: none; /* Disable text selection */
+  cursor: pointer; /* Set cursor to pointer */
+  color: var(--text-color-2); /* Text color using variable 2 */
 }
 
 .keypad_keys p:active {
-  background-color: rgba(0, 0, 0, 0.14);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.14
+  ); /* Background color of keys on active state */
 }
 
 .keypad_keys {
-  flex: 3;
-  display: flex;
-  flex-wrap: wrap;
+  flex: 3; /* Flex property to occupy 3 units of space */
+  display: flex; /* Display as a flex container */
+  flex-wrap: wrap; /* Enable wrapping of keys */
 }
 
 .keypad_keys p {
-  width: 33%;
-  height: 25%;
+  width: 33%; /* Width of each key */
+  height: 25%; /* Height of each key */
 }
 
 .keypad_symbols {
-  flex: 1;
+  flex: 1; /* Flex property to occupy 1 unit of space */
 }
 
 .keypad_symbols p {
-  color: #89a5f1;
-  width: 100%;
-  height: 20%;
+  color: #89a5f1; /* Text color of symbol keys */
+  width: 100%; /* Width of each symbol key */
+  height: 20%; /* Height of each symbol key */
 }

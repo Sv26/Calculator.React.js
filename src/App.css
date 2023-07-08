@@ -1,15 +1,15 @@
 .app {
-  --bg-color-1: #9db3ed;
-  --bg-color-2: #f9f9f9;
-  --text-color-1: #0b1537;
-  --text-color-2: #636363;
+  --bg-color-1: #9db3ed; /* Background color variable 1 */
+  --bg-color-2: #f9f9f9; /* Background color variable 2 */
+  --text-color-1: #0b1537; /* Text color variable 1 */
+  --text-color-2: #636363; /* Text color variable 2 */
 }
 
 .app[data-theme="dark"] {
-  --bg-color-1: #172d67;
-  --bg-color-2: #050c26;
-  --text-color-1: #fbfcfc;
-  --text-color-2: #bbbcbc;
+  --bg-color-1: #172d67; /* Dark mode background color variable 1 */
+  --bg-color-2: #050c26; /* Dark mode background color variable 2 */
+  --text-color-1: #fbfcfc; /* Dark mode text color variable 1 */
+  --text-color-2: #bbbcbc; /* Dark mode text color variable 2 */
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -18,29 +18,30 @@
 }
 
 .custom-scroll::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: transparent; /* Scrollbar track color */
 }
+
 .custom-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.14);
+  background-color: rgba(0, 0, 0, 0.14); /* Scrollbar thumb color */
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: gray;
+  background-color: gray; /* Scrollbar thumb color on hover */
 }
 
 .app {
-  background: #2a6c84;
-  min-height: 100vh;
+  background: #2a6c84; /* Background color of the app */
+  min-height: 100vh; /* Minimum height of the app */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .app_calculator {
-  height: 500px;
-  width: 280px;
-  border-radius: 30px;
-  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.15);
+  height: 500px; /* Height of the calculator */
+  width: 280px; /* Width of the calculator */
+  border-radius: 30px; /* Border radius of the calculator */
+  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.15); /* Box shadow of the calculator */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -53,7 +54,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: transparent; /* Background color of the navbar */
   min-height: 40px;
   padding: 10px;
   display: flex;
@@ -70,17 +71,17 @@
   height: 15px;
   width: 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 40px 80px rgba(0, 0, 0, 0.14);
+  box-shadow: 1px 1px 40px 80px rgba(0, 0, 0, 0.14); /* Box shadow of the toggle */
 }
 
 .app_calculator_navbar_toggle_circle {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: #fff;
-  transition: 300ms;
+  background-color: #fff; /* Background color of the toggle circle */
+  transition: 300ms; /* Transition duration for the toggle circle */
 }
 
 .app_calculator_navbar_toggle_circle_active {
-  margin-left: 15px;
+  margin-left: 15px; /* Margin left when the toggle is active */
 }
